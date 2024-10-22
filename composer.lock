@@ -255,12 +255,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wildoperation/wp-plugin-review-bug.git",
-                "reference": "006937f8467e2a9c0cfd9eb86fb43ab137c4fa2b"
+                "reference": "ffb9383ea0fd59784549b29141520d1c645b5862"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wildoperation/wp-plugin-review-bug/zipball/006937f8467e2a9c0cfd9eb86fb43ab137c4fa2b",
-                "reference": "006937f8467e2a9c0cfd9eb86fb43ab137c4fa2b",
+                "url": "https://api.github.com/repos/wildoperation/wp-plugin-review-bug/zipball/ffb9383ea0fd59784549b29141520d1c645b5862",
+                "reference": "ffb9383ea0fd59784549b29141520d1c645b5862",
                 "shasum": ""
             },
             "default-branch": true,
@@ -282,7 +282,7 @@
                 "issues": "https://github.com/wildoperation/wp-plugin-review-bug/issues",
                 "source": "https://github.com/wildoperation/wp-plugin-review-bug/tree/develop"
             },
-            "time": "2024-05-03T18:42:18+00:00"
+            "time": "2024-10-22T15:01:23+00:00"
         }
     ],
     "packages-dev": [],

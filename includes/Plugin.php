@@ -68,4 +68,11 @@ class Plugin {
 	public static function capability() {
 		return 'manage_options';
 	}
+
+	/**
+	 * The URL to the plugin support page
+	 */
+	public static function support_url() {
+		return 'https://wordpress.org/support/plugin/screen-stay-awake/';
+	}
 }

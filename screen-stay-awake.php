@@ -30,6 +30,24 @@ define( 'SCRNSA_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 require SCRNSA_PLUGIN_DIR . 'vendor/autoload.php';
 
 /**
+ * Review request framework
+ */
+new SCRNSA\Vendor\WOWPRB\WPPluginReviewBug(
+	__FILE__,
+	'screen-stay-awake',
+	array(
+		'intro'            => __( 'Your Screen Stay Awake reviews are invaluable to us and help us maintain a free version of this plugin. We appreciate your support!', 'screen-stay-awake' ),
+		'rate_link_text'   => __( 'Leave ★★★★★ rating', 'screen-stay-awake' ),
+		'need_help_text'   => __( 'I need help', 'screen-stay-awake' ),
+		'remind_link_text' => __( 'Remind me later', 'screen-stay-awake' ),
+		'nobug_link_text'  => __( 'Don\'t ask again', 'screen-stay-awake' ),
+	),
+	array(
+		'need_help_url' => SCRNSA\Plugin::support_url(),
+	)
+);
+
+/**
  * Initialize; plugins_loaded
  */
 add_action(
