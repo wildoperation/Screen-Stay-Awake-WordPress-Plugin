@@ -37,6 +37,7 @@ class Admin extends WOAdmin {
 		add_action( 'admin_menu', array( $this, 'create_admin_menu' ) );
 		add_action( 'admin_init', array( $this, 'register_settings' ) );
 		add_action( 'admin_notices', array( $this, 'check_if_enabled' ) );
+		add_action( 'admin_print_styles', array( $this, 'admin_print_styles' ) );
 	}
 
 	/**
@@ -78,12 +79,19 @@ class Admin extends WOAdmin {
 	public static function settings() {
 		return array(
 			'general' => array(
-				'title'    => __( 'General', 'screen-stay-awake' ),
-				'sections' => array(
+				'title'      => __( 'General', 'screen-stay-awake' ),
+				'initialize' => array(
+					'disable_404'      => 1,
+					'disable_archives' => array( 'callback' => array( '\SCRNSA\Util', 'disable_all_archive_types' ) ),
+				),
+				'sections'   => array(
 					'general' => array(
 						'title'  => __( 'General', 'screen-stay-awake' ),
 						'fields' => array(
-							'enable_stay_awake' => __( 'Enable Stay Awake', 'screen-stay-awake' ),
+							'enable_stay_awake'  => __( 'Enable Stay Awake', 'screen-stay-awake' ),
+							'disable_post_types' => __( 'Disable Post Types', 'screen-stay-awake' ),
+							'disable_archives'   => __( 'Disable Archives', 'screen-stay-awake' ),
+							'disable_404'        => __( 'Disable on 404', 'screen-stay-awake' ),
 						),
 					),
 				),
@@ -204,6 +212,56 @@ class Admin extends WOAdmin {
 	}
 
 	/**
+	 * Callback for settings field.
+	 *
+	 * @return void
+	 */
+	public function field_scrnsa_disable_post_types() {
+		$id = array( $this->sf()->key( 'general' ) => 'disable_post_types' );
+
+		$post_type_arr = array();
+		$post_types    = get_post_types( array( 'public' => true ), 'objects' );
+		$post_type_arr = Util::object_to_array( $post_types, 'name', 'label' );
+
+		// print_r( $post_types );
+		$current_options = $this->sf()->get( 'disable_post_types', 'general' );
+
+		$this->sf()->checkgroup( $id, $post_type_arr, $current_options );
+		$this->sf()->message( '<em>' . esc_html__( 'Do not load the Screen Stay Awake script on the selected post types.', 'screen-stay-awake' ) . '</em>' );
+	}
+
+	/**
+	 * Callback for settings field.
+	 *
+	 * @return void
+	 */
+	public function field_scrnsa_disable_archives() {
+		$id = array( $this->sf()->key( 'general' ) => 'disable_archives' );
+
+		$archive_arr = Util::all_archive_types();
+
+		// print_r( $post_types );
+		$current_options = $this->sf()->get( 'disable_archives', 'general' );
+
+		$this->sf()->checkgroup( $id, $archive_arr, $current_options );
+		$this->sf()->message( '<em>' . esc_html__( 'Do not load the Screen Stay Awake script on the selected archives.', 'screen-stay-awake' ) . '</em>' );
+	}
+
+	/**
+	 * Callback for settings field.
+	 *
+	 * @return void
+	 */
+	public function field_scrnsa_disable_404() {
+		$id = array( $this->sf()->key( 'general' ) => 'disable_404' );
+
+		$this->sf()->checkbox( $id, $this->sf()->get( 'disable_404', 'general' ) );
+		$this->sf()->label( $id, esc_html__( 'Disable Screen Stay Awake script on 404 page', 'screen-stay-awake' ) );
+	}
+
+
+
+	/**
 	 * Sanitize input by type.
 	 *
 	 * @param array $input The input to sanitize.
@@ -216,6 +274,11 @@ class Admin extends WOAdmin {
 		if ( $input ) {
 			foreach ( $input as $key => $value ) {
 				switch ( $key ) {
+					case 'disable_post_types':
+					case 'disable_archives':
+						$type = 'str';
+						break;
+
 					default:
 						$type = 'bool';
 						break;
@@ -237,5 +300,47 @@ class Admin extends WOAdmin {
 	 */
 	public function sanitize_scrnsa_general( $input ) {
 		return $this->sanitize_by_key_type( $input );
+	}
+
+	/**
+	 * Check the current screen against an array of screen IDs.
+	 *
+	 * @param array $screen_ids Screen IDs to compare against.
+	 *
+	 * @return bool
+	 */
+	public function is_screen( $screen_ids = array() ) {
+
+		$screen = get_current_screen();
+
+		if ( ! isset( $screen->id ) ) {
+			return false;
+		}
+
+		if ( ! $screen_ids ) {
+
+			$screen_ids = apply_filters(
+				'scrnsa_admin_all_screen_ids',
+				array()
+			);
+
+			$screen_ids = array_merge( $screen_ids, apply_filters( 'scrnsa_admin_menu_hooks', array_values( $this->admin_menu_hooks ) ) );
+		}
+
+		$screen_ids = Util::arrayify( $screen_ids );
+
+		return in_array( $screen->id, $screen_ids );
+	}
+
+	/**
+	 * Enqueue styles if we're on a screen that needs them.
+	 *
+	 * @return void
+	 */
+	public function admin_print_styles() {
+
+		if ( $this->is_screen() ) {
+			$this->enqueue_woadmin_styles();
+		}
 	}
 }
