@@ -38,6 +38,32 @@ class Admin extends WOAdmin {
 		add_action( 'admin_init', array( $this, 'register_settings' ) );
 		add_action( 'admin_notices', array( $this, 'check_if_enabled' ) );
 		add_action( 'admin_print_styles', array( $this, 'admin_print_styles' ) );
+
+		add_filter( 'plugin_action_links_' . SCRNSA_PLUGIN_BASENAME, array( $this, 'plugin_action_links' ) );
+	}
+
+	/**
+	 * Add links to the plugin screen.
+	 *
+	 * @param array $links Existing links passed into this function.
+	 *
+	 * @return array
+	 */
+	public function plugin_action_links( $links ) {
+		$action_links = array(
+			array(
+				'title' => __( 'Settings', 'ad-commander' ),
+				'url'   => self::settings_admin_url(),
+			),
+		);
+
+		$plugin_links = array();
+
+		foreach ( $action_links as $action_link ) {
+			$plugin_links[ Util::ns( sanitize_title( $action_link['title'] ), '_' ) ] = '<a href="' . esc_url( $action_link['url'] ) . '">' . esc_html( $action_link['title'] ) . '</a>';
+		}
+
+		return array_merge( $plugin_links, $links );
 	}
 
 	/**
