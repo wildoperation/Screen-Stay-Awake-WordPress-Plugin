@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:     Screen Stay Awake
- * Plugin URI:      https://github.com/wildoperation/Screen-Stay-Awake-WordPress-Plugin
+ * Plugin URI:      https://wordpress.org/plugins/screen-stay-awake/
  * Description:     Request a visitor's screen stay active while viewing your website. Implements Screen Wake Lock API.
  * Version:         1.0.3
  * Author:          Wild Operation
