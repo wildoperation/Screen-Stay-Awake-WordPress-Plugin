@@ -37,7 +37,6 @@ class Front {
 				}
 			} elseif ( ! is_404() ) {
 				$disabled_archives = Options::instance()->get( 'disable_archives', 'general' );
-				print_r( $disabled_archives );
 
 				if ( $disabled_archives && ! empty( $disabled_archives ) ) {
 					if ( is_post_type_archive( $disabled_archives ) ) {

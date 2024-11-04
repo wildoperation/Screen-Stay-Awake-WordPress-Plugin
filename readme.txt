@@ -2,8 +2,8 @@
 Contributors: wildoperation, timstl
 Tags: screen, lock, wakelock, recipes, howto
 Requires at least: 6.2
-Tested up to: 6.6
-Stable tag: 1.0.3
+Tested up to: 6.7
+Stable tag: 1.0.4
 Requires PHP: 7.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -31,5 +31,9 @@ If you need customized logic, you can use the filter `scrnsa_stayawake_should_en
 1. Screen Stay Awake plugin settings screen
 
 == Changelog ==
+= 1.0.4 =
+* Support for WordPress 6.7
+* Adds localization support
+
 = 1.0.3 =
 * Adds the ability to disable script on post types, archives, and 404 pages

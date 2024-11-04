@@ -52,7 +52,7 @@ class Admin extends WOAdmin {
 	public function plugin_action_links( $links ) {
 		$action_links = array(
 			array(
-				'title' => __( 'Settings', 'ad-commander' ),
+				'title' => __( 'Settings', 'screen-stay-awake' ),
 				'url'   => self::settings_admin_url(),
 			),
 		);
@@ -215,6 +215,24 @@ class Admin extends WOAdmin {
 			self::settings(),
 			false
 		);
+
+		if ( ! defined( 'ADCMDR_LOADED' ) ) {
+			$this->cross_promote();
+		}
+	}
+
+	/**
+	 * Display banner for related add-ons
+	 */
+	public function cross_promote() {
+		?>
+		<div class="wrap scrnsa-cross">
+			<h3><?php esc_html_e( 'Related plugins', 'screen-stay-awake' ); ?></h3>
+			<a href="https://wordpress.org/plugins/ad-commander/" target="_blank" rel="noopener noreferrer">
+				<img src="<?php echo esc_url( Plugin::assets_url() . 'img/adcmdr-header.png' ); ?>" alt="<?php esc_attr_e( 'Ad Commander', 'screen-stay-awake' ); ?>"/>
+			</a>
+		</div>
+		<?php
 	}
 
 	/**
@@ -367,6 +385,7 @@ class Admin extends WOAdmin {
 
 		if ( $this->is_screen() ) {
 			$this->enqueue_woadmin_styles();
+			wp_enqueue_style( Util::ns( 'admin' ), Plugin::assets_url() . 'css/admin.css', array( 'woadmin' ), Plugin::version() );
 		}
 	}
 }

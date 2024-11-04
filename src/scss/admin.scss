@@ -1,0 +1,13 @@
+$wp-border-color: #c3c4c7;
+
+.scrnsa-cross {
+	border-top: 1px solid $wp-border-color;
+	margin-top: 1.5rem;
+
+	img {
+		display: block;
+		max-width: 772px;
+		width: 100%;
+		height: auto;
+	}
+}

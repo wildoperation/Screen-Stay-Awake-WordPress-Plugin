@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name:     Screen Stay Awake
- * Plugin URI:      https://wordpress.org/plugins/screen-stay-awake/
+ * Plugin URI:      https://github.com/wildoperation/Screen-Stay-Awake-WordPress-Plugin
  * Description:     Request a visitor's screen stay active while viewing your website. Implements Screen Wake Lock API.
- * Version:         1.0.3
+ * Version:         1.0.4
  * Author:          Wild Operation
  * Author URI:      https://wildoperation.com
  * License:         GPL-3.0
@@ -13,7 +13,7 @@
  * @package WordPress
  * @subpackage Screen Stay Awake
  * @since 1.0.0
- * @version 1.0.3
+ * @version 1.0.4
  */
 
 /* Abort! */
@@ -58,6 +58,7 @@ add_action(
 		 * Initiate classes and their hooks.
 		 */
 		$classes = array(
+			'SCRNSA\Localize',
 			'SCRNSA\Admin',
 			'SCRNSA\Front',
 		);
