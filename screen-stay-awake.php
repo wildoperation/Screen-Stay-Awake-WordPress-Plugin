@@ -50,7 +50,8 @@ add_action(
 				'need_help_url' => SCRNSA\Plugin::support_url(),
 			)
 		);
-	}
+	},
+	1
 );
 
 /**
