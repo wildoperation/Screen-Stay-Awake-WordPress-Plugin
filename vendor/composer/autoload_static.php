@@ -50,6 +50,7 @@ class ComposerStaticInit33048f92e6965fff50f0933525049d79
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'SCRNSA\\Admin' => __DIR__ . '/../..' . '/includes/Admin.php',
         'SCRNSA\\Front' => __DIR__ . '/../..' . '/includes/Front.php',
+        'SCRNSA\\Localize' => __DIR__ . '/../..' . '/includes/Localize.php',
         'SCRNSA\\Options' => __DIR__ . '/../..' . '/includes/Options.php',
         'SCRNSA\\Plugin' => __DIR__ . '/../..' . '/includes/Plugin.php',
         'SCRNSA\\Util' => __DIR__ . '/../..' . '/includes/Util.php',

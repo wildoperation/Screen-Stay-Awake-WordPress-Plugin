@@ -9,6 +9,7 @@ return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'SCRNSA\\Admin' => $baseDir . '/includes/Admin.php',
     'SCRNSA\\Front' => $baseDir . '/includes/Front.php',
+    'SCRNSA\\Localize' => $baseDir . '/includes/Localize.php',
     'SCRNSA\\Options' => $baseDir . '/includes/Options.php',
     'SCRNSA\\Plugin' => $baseDir . '/includes/Plugin.php',
     'SCRNSA\\Util' => $baseDir . '/includes/Util.php',

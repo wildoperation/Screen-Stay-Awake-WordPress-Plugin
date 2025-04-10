@@ -122,10 +122,10 @@
             },
             "type": "composer-plugin",
             "extra": {
+                "class": "TypistTech\\Imposter\\Plugin\\ImposterPlugin",
                 "branch-alias": {
                     "dev-master": "0.6.x-dev"
-                },
-                "class": "TypistTech\\Imposter\\Plugin\\ImposterPlugin"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -255,12 +255,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wildoperation/wp-plugin-review-bug.git",
-                "reference": "ffb9383ea0fd59784549b29141520d1c645b5862"
+                "reference": "57f6dcb1a5624c1c18ac2abfdc670e02f6ed0273"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wildoperation/wp-plugin-review-bug/zipball/ffb9383ea0fd59784549b29141520d1c645b5862",
-                "reference": "ffb9383ea0fd59784549b29141520d1c645b5862",
+                "url": "https://api.github.com/repos/wildoperation/wp-plugin-review-bug/zipball/57f6dcb1a5624c1c18ac2abfdc670e02f6ed0273",
+                "reference": "57f6dcb1a5624c1c18ac2abfdc670e02f6ed0273",
                 "shasum": ""
             },
             "default-branch": true,
@@ -282,7 +282,7 @@
                 "issues": "https://github.com/wildoperation/wp-plugin-review-bug/issues",
                 "source": "https://github.com/wildoperation/wp-plugin-review-bug/tree/develop"
             },
-            "time": "2024-10-22T15:01:23+00:00"
+            "time": "2025-04-10T12:56:39+00:00"
         }
     ],
     "packages-dev": [],
