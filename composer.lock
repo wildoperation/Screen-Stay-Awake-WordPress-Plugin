@@ -185,13 +185,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wildoperation/WO-Admin-Framework-for-WordPress-Plugins.git",
-                "reference": "ffb6e1649e56a190b92fc0ad8482e05832cad76b"
+                "url": "https://github.com/wildoperation/WO-Admin-Framework-for-WordPress-Plugins",
+                "reference": "d88f3413961584cfd52e1580eb649858162b9122"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wildoperation/WO-Admin-Framework-for-WordPress-Plugins/zipball/ffb6e1649e56a190b92fc0ad8482e05832cad76b",
-                "reference": "ffb6e1649e56a190b92fc0ad8482e05832cad76b",
+                "url": "https://api.github.com/repos/wildoperation/WO-Admin-Framework-for-WordPress-Plugins/zipball/d88f3413961584cfd52e1580eb649858162b9122",
+                "reference": "d88f3413961584cfd52e1580eb649858162b9122",
                 "shasum": ""
             },
             "type": "library",
@@ -208,24 +208,20 @@
             "keywords": [
                 "wordpress"
             ],
-            "support": {
-                "issues": "https://github.com/wildoperation/WO-Admin-Framework-for-WordPress-Plugins/issues",
-                "source": "https://github.com/wildoperation/WO-Admin-Framework-for-WordPress-Plugins/tree/develop"
-            },
-            "time": "2024-07-08T13:25:38+00:00"
+            "time": "2026-03-21T14:49:03+00:00"
         },
         {
             "name": "wildoperation/wo-log",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wildoperation/wo-log.git",
-                "reference": "abd9ce9de7b4e632af553dbff35f720dfd610143"
+                "url": "https://github.com/wildoperation/wo-log",
+                "reference": "c45e32f4dfb0c49e2ae53efbe768a0322a67acf3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wildoperation/wo-log/zipball/abd9ce9de7b4e632af553dbff35f720dfd610143",
-                "reference": "abd9ce9de7b4e632af553dbff35f720dfd610143",
+                "url": "https://api.github.com/repos/wildoperation/wo-log/zipball/c45e32f4dfb0c49e2ae53efbe768a0322a67acf3",
+                "reference": "c45e32f4dfb0c49e2ae53efbe768a0322a67acf3",
                 "shasum": ""
             },
             "default-branch": true,
@@ -243,18 +239,14 @@
             "keywords": [
                 "wordpress"
             ],
-            "support": {
-                "issues": "https://github.com/wildoperation/wo-log/issues",
-                "source": "https://github.com/wildoperation/wo-log/tree/master"
-            },
-            "time": "2023-12-14T13:51:02+00:00"
+            "time": "2025-09-24T15:57:47+00:00"
         },
         {
             "name": "wildoperation/wp-plugin-review-bug",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wildoperation/wp-plugin-review-bug.git",
+                "url": "https://github.com/wildoperation/wp-plugin-review-bug",
                 "reference": "57f6dcb1a5624c1c18ac2abfdc670e02f6ed0273"
             },
             "dist": {
@@ -278,10 +270,6 @@
             "keywords": [
                 "wordpress"
             ],
-            "support": {
-                "issues": "https://github.com/wildoperation/wp-plugin-review-bug/issues",
-                "source": "https://github.com/wildoperation/wp-plugin-review-bug/tree/develop"
-            },
             "time": "2025-04-10T12:56:39+00:00"
         }
     ],

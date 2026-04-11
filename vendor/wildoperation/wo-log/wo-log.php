@@ -1,4 +1,12 @@
 <?php
+/**
+ * wo-log
+ *
+ * A simple logging utility for WordPress plugins and themes.
+ *
+ * @package wo-log
+ * @author  Wild Operation
+ */
 if ( ! function_exists( 'wo_log' ) ) {
 	/**
 	 * Logging function.
@@ -14,12 +22,16 @@ if ( ! function_exists( 'wo_log' ) ) {
 	 * @param string|int|object|array $log Debug info to log.
 	 */
 	function wo_log( $log ) {
-		if ( true === WP_DEBUG ) {
-			if ( is_array( $log ) || is_object( $log ) ) {
-				error_log( print_r( $log, true ) );
-			} else {
-				error_log( $log );
+		try {
+			if ( true === WP_DEBUG ) {
+				if ( is_array( $log ) || is_object( $log ) ) {
+					error_log( print_r( $log, true ) );
+				} else {
+					error_log( $log );
+				}
 			}
+		} catch ( \Throwable $e ) {
+			// ignore
 		}
 	}
 }

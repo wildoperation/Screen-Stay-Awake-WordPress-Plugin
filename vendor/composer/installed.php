@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-develop',
         'version' => 'dev-develop',
-        'reference' => 'af71a830efe47886c302356753d37cc47513ede2',
+        'reference' => '4ec8c612957b1684236257eb899eab3bc6b77cf2',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-develop',
             'version' => 'dev-develop',
-            'reference' => 'af71a830efe47886c302356753d37cc47513ede2',
+            'reference' => '4ec8c612957b1684236257eb899eab3bc6b77cf2',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -40,7 +40,7 @@
         'wildoperation/wo-admin-framework' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'ffb6e1649e56a190b92fc0ad8482e05832cad76b',
+            'reference' => 'd88f3413961584cfd52e1580eb649858162b9122',
             'type' => 'library',
             'install_path' => __DIR__ . '/../wildoperation/wo-admin-framework',
             'aliases' => array(),
@@ -49,7 +49,7 @@
         'wildoperation/wo-log' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'abd9ce9de7b4e632af553dbff35f720dfd610143',
+            'reference' => 'c45e32f4dfb0c49e2ae53efbe768a0322a67acf3',
             'type' => 'library',
             'install_path' => __DIR__ . '/../wildoperation/wo-log',
             'aliases' => array(
