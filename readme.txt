@@ -2,7 +2,7 @@
 Contributors: wildoperation, timstl
 Tags: screen, lock, wakelock, recipes, howto
 Requires at least: 6.2
-Tested up to: 6.7
+Tested up to: 7.0
 Stable tag: 1.0.6
 Requires PHP: 7.4
 License: GPLv3

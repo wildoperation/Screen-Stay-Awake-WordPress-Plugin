@@ -64,7 +64,7 @@ add_action(
 		 * Initiate classes and their hooks.
 		 */
 		$classes = array(
-			'SCRNSA\Localize',
+			// 'SCRNSA\Localize',
 			'SCRNSA\Admin',
 			'SCRNSA\Front',
 		);

@@ -228,7 +228,7 @@ class Admin extends WOAdmin {
 		?>
 		<div class="wrap scrnsa-cross">
 			<h3><?php esc_html_e( 'Related plugins', 'screen-stay-awake' ); ?></h3>
-			<a href="https://wordpress.org/plugins/ad-commander/" target="_blank" rel="noopener noreferrer">
+			<a href="https://wpadcommander.com/?utm_source=wpadmin&utm_medium=banner&utm_campaign=screenstayawake" target="_blank" rel="noopener noreferrer">
 				<img src="<?php echo esc_url( Plugin::assets_url() . 'img/adcmdr-header.png' ); ?>" alt="<?php esc_attr_e( 'Ad Commander', 'screen-stay-awake' ); ?>"/>
 			</a>
 		</div>
