@@ -187,15 +187,15 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wildoperation/WO-Admin-Framework-for-WordPress-Plugins",
-                "reference": "d88f3413961584cfd52e1580eb649858162b9122"
+                "reference": "9bd0618da4dc28b9007309206dd140f2fd0d8903"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wildoperation/WO-Admin-Framework-for-WordPress-Plugins/zipball/d88f3413961584cfd52e1580eb649858162b9122",
-                "reference": "d88f3413961584cfd52e1580eb649858162b9122",
+                "url": "https://api.github.com/repos/wildoperation/WO-Admin-Framework-for-WordPress-Plugins/zipball/9bd0618da4dc28b9007309206dd140f2fd0d8903",
+                "reference": "9bd0618da4dc28b9007309206dd140f2fd0d8903",
                 "shasum": ""
             },
-            "time": "2026-03-21T14:49:03+00:00",
+            "time": "2026-05-06T21:40:57+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
